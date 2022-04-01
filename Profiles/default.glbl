@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://demoaut.katalon.com'</initValue>
+      <initValue>'https://dev.p2p.alamisharia.co.id'</initValue>
       <name>G_SiteURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

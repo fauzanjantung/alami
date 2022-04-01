@@ -18,14 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-WebUI.click(findTestObject('Page_CuraHomepage/btn_MakeAppointment'))
+WebUI.waitForElementVisible(findTestObject('Page_Login/input_username'), GlobalVariable.G_Timeout)
 
-WebUI.setText(findTestObject('Page_Login/txt_UserName'), Username)
+WebUI.setText(findTestObject('Page_Login/input_username'), Username)
 
-WebUI.setText(findTestObject('Page_Login/txt_Password'), Password)
+WebUI.setText(findTestObject('Page_Login/input_password'), Password)
 
-WebUI.click(findTestObject('Page_Login/btn_Login'))
-
-landingPage = WebUI.verifyElementPresent(findTestObject('Page_CuraAppointment/div_Appointment'), GlobalVariable.G_Timeout)
+WebUI.click(findTestObject('Page_Login/a_login'))
 

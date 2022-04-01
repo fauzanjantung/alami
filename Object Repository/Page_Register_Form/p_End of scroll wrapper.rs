@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_End of scroll wrapper</name>
+   <tag></tag>
+   <elementGuidId>d5e13cde-669b-493f-9234-0bfce549fd61</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='scrollWrapper']/p[22]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Plaza 89, Kav. X7Jln. H.R. Rasuna Said No. 6Kel. Karet KuninganKec. Setiabudi Kota Adm. Jakarta Selatan DKI Jakarta 021- 31116191 Instagram: ​@ALAMIsharia Atau kunjungi laman FAQ ALAMI untuk informasi lebih lanjut.</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;scrollWrapper&quot;)/p[22]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='scrollWrapper']/p[22]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='KONTAK DAN MEDIA SOSIAL ALAMI'])[1]/following::p[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='HUKUM YANG BERLAKU DAN YURISDIKSI'])[1]/following::p[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Plaza 89, Kav. X7']/parent::*</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p[22]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'Plaza 89, Kav. X7Jln. H.R. Rasuna Said No. 6Kel. Karet KuninganKec. Setiabudi Kota Adm. Jakarta Selatan DKI Jakarta 021- 31116191 Instagram: ​@ALAMIsharia Atau kunjungi laman FAQ ALAMI untuk informasi lebih lanjut.' or . = 'Plaza 89, Kav. X7Jln. H.R. Rasuna Said No. 6Kel. Karet KuninganKec. Setiabudi Kota Adm. Jakarta Selatan DKI Jakarta 021- 31116191 Instagram: ​@ALAMIsharia Atau kunjungi laman FAQ ALAMI untuk informasi lebih lanjut.')]</value>
+   </webElementXpaths>
+</WebElementEntity>

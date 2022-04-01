@@ -23,20 +23,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-WebUI.comment('Story: Login to Alami')
+WebUI.comment('Story: Register to Alami')
 
 WebUI.openBrowser(GlobalVariable.G_SiteURL)
 
-WebUI.comment('Given that the user has the valid login information')
+WebUI.comment('Given that the user has the valid register information')
 
-WebUI.comment('When he logins to Alami')
+WebUI.comment('When he registers to Alami')
 
-WebUI.callTestCase(findTestCase('Common Test Cases/Login'), [('Email') : 'fauzan08fauzan@gmail.com', ('Password') : 'Alami,1,2,3!'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common Test Cases/Register'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.comment('Then he should be able to login successfully')
+WebUI.comment('Then he should be able to register successfully')
 
-WebUI.verifyElementVisible(findTestObject('Page_Dashboard/h4_Dashboard Alert'), FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementVisible(findTestObject('Page_Register_Form/p_Registration Success Text'),
+	FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 
