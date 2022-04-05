@@ -12,27 +12,9 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>3b26c310-550d-4eb9-b178-0e3761b48b9e</testSuiteGuid>
    <testCaseLink>
-      <guid>da42a8ab-b769-4445-9c21-075ecd9f17cb</guid>
+      <guid>4823408c-2f73-4df6-ab38-1889c553e552</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Main Test Cases/TC1_Verify Successful Login</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>14d98e7b-4ac8-4e28-8ce7-394001d188f0</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>a97344e7-5f9c-4936-92a2-d85e5463f3c9</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ec8e3d9e-bb5a-40f4-800e-f90065a41fbb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Main Test Cases/TC2_Verify Successful Registration</testCaseId>
+      <testCaseId>Test Cases/Main Test Cases/TC1_Successful Registration, Verify Email, Login</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

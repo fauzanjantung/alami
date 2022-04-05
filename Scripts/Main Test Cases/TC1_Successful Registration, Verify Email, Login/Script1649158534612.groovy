@@ -23,7 +23,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
-import org.openqa.selenium.Keys as Keys
+
+
+WebUI.comment('Story: Register to Alami')
+
+WebUI.openBrowser(GlobalVariable.G_SiteURL)
 
 WebUI.waitForElementVisible(findTestObject('Page_Login/a_register'), GlobalVariable.G_Timeout)
 
@@ -41,9 +45,13 @@ String generatedName = 'SDET ' + randomString
 
 Integer time = new Date().getTime()
 
-String generatedEmail = ('SDET' + time) + '@alamisharia.co.id'
+String generatedWords = 'sdet' + time.toString()
 
-String generatedPhone = '08' + time
+String generatedEmail = generatedWords + '@mail7.io'
+
+String generatedPhone = '08' + time.toString()
+
+String password = 'Alami,1,2,3!'
 
 WebUI.setText(findTestObject('Page_Register_Form/input_name'), generatedName)
 
@@ -51,7 +59,7 @@ WebUI.setText(findTestObject('Page_Register_Form/input_email'), generatedEmail)
 
 WebUI.setText(findTestObject('Page_Register_Form/input_phone'), generatedPhone)
 
-WebUI.setText(findTestObject('Page_Register_Form/input_password'), 'Alami,1,2,3!')
+WebUI.setText(findTestObject('Page_Register_Form/input_password'), password)
 
 WebUI.click(findTestObject('Page_Register_Form/label_Individual'))
 
@@ -63,12 +71,53 @@ WebUI.click(findTestObject('Page_Register_Form/button_Lanjutkan'))
 
 WebUI.waitForElementVisible(findTestObject('Page_Register_Form/div_scrollWrapper'), GlobalVariable.G_Timeout)
 
-WebUI.scrollToElement(findTestObject('Page_Register_Form/p_End of scroll wrapper'), 
-    GlobalVariable.G_Timeout)
+WebUI.scrollToElement(findTestObject('Page_Register_Form/p_End of scroll wrapper'), GlobalVariable.G_Timeout)
 
 WebUI.click(findTestObject('Page_Register_Form/input_Alami Info'))
 
 WebUI.click(findTestObject('Page_Register_Form/input_Alami Agreement'))
 
 WebUI.click(findTestObject('Page_Register_Form/button_Lanjutkan Page 2'))
+
+WebUI.verifyElementVisible(findTestObject('Page_Register_Form/p_Registration Success Text'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(5)
+
+WebUI.navigateToUrl('https://console.mail7.io/admin/inbox/inbox?username=' + generatedWords)
+
+WebUI.click(findTestObject('Page_Mail 7 - Dashboard/p_Email Title'))
+
+WebUI.switchToFrame(findTestObject('Page_Mail 7 - Dashboard/iframe_Email'), GlobalVariable.G_Timeout)
+
+WebUI.scrollToElement(findTestObject('Page_Mail 7 - Dashboard/b_Name in Email'), GlobalVariable.G_Timeout)
+
+WebUI.verifyElementText(findTestObject('Page_Mail 7 - Dashboard/b_Name in Email'), generatedName)
+
+WebUI.verifyElementText(findTestObject('Page_Mail 7 - Dashboard/b_Email in Email'), generatedEmail)
+
+WebUI.scrollToElement(findTestObject('Page_Mail 7 - Dashboard/a_Aktivasi Email'), GlobalVariable.G_Timeout)
+
+WebUI.click(findTestObject('Page_Mail 7 - Dashboard/a_Aktivasi Email'))
+
+WebUI.switchToWindowIndex(1)
+
+WebUI.waitForElementVisible(findTestObject('Page_Register_Form/a_Masuk ke Akun Saya'),
+	GlobalVariable.G_Timeout)
+
+WebUI.scrollToElement(findTestObject('Page_Register_Form/a_Masuk ke Akun Saya'),
+	GlobalVariable.G_Timeout)
+
+WebUI.click(findTestObject('Page_Register_Form/a_Masuk ke Akun Saya'))
+
+WebUI.waitForElementVisible(findTestObject('Page_Login/input_username'), GlobalVariable.G_Timeout)
+
+WebUI.setText(findTestObject('Page_Login/input_username'), generatedEmail)
+
+WebUI.setText(findTestObject('Page_Login/input_password'), password)
+
+WebUI.click(findTestObject('Page_Login/a_login'))
+
+WebUI.verifyElementVisible(findTestObject('Page_Dashboard/h4_Dashboard Alert'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
 
